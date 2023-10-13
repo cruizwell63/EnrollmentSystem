@@ -43,11 +43,12 @@ namespace EnrollmentSystem
                 PassMatch.Visible = true; //if passwords did not match, show message
             }
             else if (q == 1) {
-                MessageBox.Show("Username already taken","Warning");
+                usernametkn.Visible = true;
             }
             else {
                 FillFields.Visible = false;
                 PassMatch.Visible = false;
+                usernametkn.Visible = false;
                 db.addUser(Username.Text, Password.Text, temp, Fname.Text, MName.Text, Lname.Text, Gender.Text, BDate.Value, role, DateTime.Now, DateTime.Now);
                 MessageBox.Show("Registered Successfully!", "Successful");
             }

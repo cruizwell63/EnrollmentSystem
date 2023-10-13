@@ -51,6 +51,7 @@ namespace EnrollmentSystem
             this.BDate = new System.Windows.Forms.DateTimePicker();
             this.FillFields = new System.Windows.Forms.Label();
             this.PassMatch = new System.Windows.Forms.Label();
+            this.usernametkn = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Username
@@ -242,11 +243,23 @@ namespace EnrollmentSystem
             this.PassMatch.Text = "*Passwords did not match.";
             this.PassMatch.Visible = false;
             // 
+            // usernametkn
+            // 
+            this.usernametkn.AutoSize = true;
+            this.usernametkn.ForeColor = System.Drawing.Color.Red;
+            this.usernametkn.Location = new System.Drawing.Point(133, 92);
+            this.usernametkn.Name = "usernametkn";
+            this.usernametkn.Size = new System.Drawing.Size(182, 17);
+            this.usernametkn.TabIndex = 22;
+            this.usernametkn.Text = "*Username is already taken";
+            this.usernametkn.Visible = false;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(332, 717);
+            this.Controls.Add(this.usernametkn);
             this.Controls.Add(this.PassMatch);
             this.Controls.Add(this.FillFields);
             this.Controls.Add(this.BDate);
@@ -299,5 +312,6 @@ namespace EnrollmentSystem
         private System.Windows.Forms.DateTimePicker BDate;
         private System.Windows.Forms.Label FillFields;
         private System.Windows.Forms.Label PassMatch;
+        private System.Windows.Forms.Label usernametkn;
     }
 }
