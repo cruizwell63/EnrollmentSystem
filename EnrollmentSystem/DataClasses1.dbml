@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="enrollment" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CRUIZWELL-C\SQLEXPRESS;Initial Catalog=enrollment;Integrated Security=True" SettingsObjectName="EnrollmentSystem.Properties.Settings" SettingsPropertyName="enrollmentConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.users" Member="users">
+    <Type Name="user">
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="userpassword" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="temppassword" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="fname" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="mname" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="lname" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="gender" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="bdate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.checkUsername" Method="checkUsername1">
+    <Parameter Name="username" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.addUser" Method="addUser">
+    <Parameter Name="username" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="userpassword" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="temppassword" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="fname" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="mname" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="lname" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="gender" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="bdate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="role" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="created_at" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="updated_at" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
